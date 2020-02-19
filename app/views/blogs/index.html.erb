@@ -1,0 +1,25 @@
+<style type="text/css">
+  .card{
+    background-image: linear-gradient(90deg, #9FB880 25%, #1FC896 50%, #2CB693 75%);
+  }
+</style>
+<p id="notice"><%= notice %></p>
+
+<center><h1>Blogs</h1></center>
+<center><%= link_to 'Write Blog', new_blog_path, :class => "btn btn-warning btn-sm" %></center>
+<br>
+<div class="row">
+  <% @blogs.each_with_index do |blog, i| %>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= blog.title %></h5>
+          <p class="card-text"><%= blog.desc %></p>
+          <%= link_to 'Show', blog, :class => "btn btn-success btn-sm" %>
+          <%= link_to 'Edit', edit_blog_path(blog), :class => "btn btn-primary btn-sm" %>
+          <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-sm" %> 
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

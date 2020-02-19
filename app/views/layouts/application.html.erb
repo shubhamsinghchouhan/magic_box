@@ -7,9 +7,96 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="css/flaticon.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/gijgo.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/all.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.css"/>
+     
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+    <!-- jquery plugins here-->
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- masonry js -->
+    <script src="js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script src="js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+
   </head>
 
   <body>
+    <style type="text/css">
+      .corner-ribbon{
+        width: 200px;
+        background: #e43;
+        position: absolute;
+        top: 25px;
+        left: -50px;
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 1px;
+        color: #f0f0f0;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+      }
+      .corner-ribbon.sticky{position: fixed;}
+      .corner-ribbon.shadow{box-shadow: 0 0 0px rgba(0,0,0,.3);}
+      .corner-ribbon.top-right{
+        top: 25px;
+        right: -50px;
+        left: auto;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+      .corner-ribbon.white     {background: #f0f0f0; color: #555;}
+      .corner-ribbon.black     {background: #333;}
+      .corner-ribbon.grey      {background: #999;}
+      .corner-ribbon.blue      {background: #39d;}
+      .corner-ribbon.green     {background: #2c7;}
+      .corner-ribbon.turquoise {background: #1b9;}
+      .corner-ribbon.purple    {background: #95b;}
+      .corner-ribbon.red       {background: #e43;}
+      .corner-ribbon.orange    {background: #e82;}
+      .corner-ribbon.yellow    {background: #ec0;}
+      #right-corner-ribbon     {
+        z-index: 1000000;
+        font-variant: small-caps;
+        font-size: x-large;
+        font-family: Snell Roundhand, cursive;
+        background-image: linear-gradient(180deg, #f5b707 29%, #f77920 60%, #ca1616 165%)
+      }
+    </style>
+
+    <div id= "right-corner-ribbon" class="corner-ribbon top-right shadow sticky">Shubham</div>
+
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>

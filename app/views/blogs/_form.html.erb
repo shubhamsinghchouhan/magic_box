@@ -1,0 +1,40 @@
+<style type="text/css">
+  #blog_title_input{
+    height: 50px;
+  }
+  #blog_desc_input{
+    height: 137px;
+  }
+  #blog_title_input, #blog_desc_input{
+    margin-left: 10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 75%;
+  }
+
+</style>
+<%= form_with(model: blog, local: true) do |form| %>
+  <% if blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+        <% blog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :title, class: "form-control", id: "blog_title_input", placeholder: "Title" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.text_area :desc, class: "form-control", id: "blog_desc_input", placeholder: "Description" %>
+  </div>
+  <br>
+  <div class="actions">
+    <center><%= form.submit 'Create', class: "btn btn-outline-info" %></center>
+  </div>
+<% end %>
